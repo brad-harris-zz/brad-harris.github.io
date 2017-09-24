@@ -1,1 +1,1 @@
-let ncaaStandings={"Brian": {"wins": "36", "losses": "9"}, "Mike": {"wins": "27", "losses": "19"}, "Adam": {"wins": "26", "losses": "15"}, "Chad": {"wins": "33", "losses": "13"}, "Brad": {"wins": "33", "losses": "10"}}
+var ncaaStandings={"Brian": {"wins": "36", "losses": "9"}, "Mike": {"wins": "27", "losses": "19"}, "Adam": {"wins": "26", "losses": "15"}, "Chad": {"wins": "33", "losses": "13"}, "Brad": {"wins": "33", "losses": "10"}}
