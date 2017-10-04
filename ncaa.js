@@ -1,32 +1,31 @@
-function showNcaaStandings() {
-    var ncaaStandings = window.FOOTBALL.ncaaStandings || {};
-    for(var row in ncaaStandings) {
-	let line = ncaaStandings[row];
+function showStandings(standings, element) {
+    for(var row in standings) {
+	let line = standings[row];
 	let txt = line['owner'] + " (" + line['wins'] + ", " + line['losses'] + ")";
 	let item = document.createElement("li");
 	let textElement = document.createTextNode(txt);
 	item.appendChild(textElement);
-	let list = document.getElementById("ncaa-standings");
-	list.appendChild(item);
+	element.appendChild(item);
     }
 }
 
-function showNcaaDraft() { 
-    var ncaaDraft = window.FOOTBALL.ncaaDraft || {}
-    for(var key in ncaaDraft) { 
-	if(ncaaDraft.hasOwnProperty(key)) { 
+function showDraft(draft, element) { 
+    for(var key in draft) { 
+	if(draft.hasOwnProperty(key)) { 
 	    let item = document.createElement("li");
-	    let pick = ncaaDraft[key];
+	    let pick = draft[key];
 	    let txt = pick.owner + " - " + pick.name + " (" + pick.wins + ", " + pick.losses + ")"
 	    let text = document.createTextNode(txt);
 	    item.appendChild(text);
-	    let list = document.getElementById("ncaa-draft");
-	    list.appendChild(item);
+	    element.appendChild(item);
 	}
     }    
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    showNcaaStandings();
-    showNcaaDraft();
+    showStandings(window.FOOTBALL.ncaaStandings || {}, document.getElementById("ncaa-standings"));
+    showDraft(window.FOOTBALL.ncaaDraft || {}, document.getElementById("ncaa-draft"));
+    showStandings(window.FOOTBALL.nflStandings || {}, document.getElementById("nfl-standings"));
+    showDraft(window.FOOTBALL.nflDraft || {}, document.getElementById("nfl-draft"));
+
 }, false);
