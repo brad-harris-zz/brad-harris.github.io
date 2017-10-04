@@ -1,3 +1,32 @@
-let ncaaStandings={"Brian": {"wins": "36", "losses": "9"}, "Mike": {"wins": "27", "losses": "19"}, "Adam": {"wins": "26", "losses": "15"}, "Chad": {"wins": "33", "losses": "13"}, "Brad": {"wins": "33", "losses": "10"}}
+function showNcaaStandings() {
+    var ncaaStandings = window.FOOTBALL.ncaaStandings || {};
+    for(var row in ncaaStandings) {
+	let line = ncaaStandings[row];
+	let txt = line['owner'] + " (" + line['wins'] + ", " + line['losses'] + ")";
+	let item = document.createElement("li");
+	let textElement = document.createTextNode(txt);
+	item.appendChild(textElement);
+	let list = document.getElementById("ncaa-standings");
+	list.appendChild(item);
+    }
+}
 
-let ncaaDraft={"1": {"owner": "Chad", "wins": "4", "losses": "0", "name": "Alabama"}, "2": {"owner": "Brian", "wins": "4", "losses": "0", "name": "Oklahoma"}, "3": {"owner": "Mike", "wins": "3", "losses": "1", "name": "Ohio St."}, "4": {"owner": "Brad", "wins": "4", "losses": "0", "name": "Southern California"}, "5": {"owner": "Adam", "wins": "0", "losses": "2", "name": "Florida St."}, "6": {"owner": "Adam", "wins": "3", "losses": "1", "name": "Oklahoma St."}, "7": {"owner": "Brad", "wins": "4", "losses": "0", "name": "Clemson"}, "8": {"owner": "Mike", "wins": "3", "losses": "0", "name": "Wisconsin"}, "9": {"owner": "Brian", "wins": "4", "losses": "0", "name": "Washington"}, "10": {"owner": "Chad", "wins": "3", "losses": "1", "name": "Louisville"}, "11": {"owner": "Chad", "wins": "4", "losses": "0", "name": "Virginia Tech"}, "12": {"owner": "Brian", "wins": "4", "losses": "0", "name": "Michigan"}, "13": {"owner": "Mike", "wins": "2", "losses": "2", "name": "Stanford"}, "14": {"owner": "Brad", "wins": "4", "losses": "0", "name": "Penn St."}, "15": {"owner": "Adam", "wins": "1", "losses": "2", "name": "Texas"}, "16": {"owner": "Adam", "wins": "2", "losses": "2", "name": "UCLA"}, "17": {"owner": "Brad", "wins": "3", "losses": "1", "name": "West Virginia"}, "18": {"owner": "Mike", "wins": "3", "losses": "1", "name": "LSU"}, "19": {"owner": "Brian", "wins": "2", "losses": "1", "name": "Kansas St."}, "20": {"owner": "Chad", "wins": "4", "losses": "0", "name": "Georgia"}, "21": {"owner": "Chad", "wins": "4", "losses": "0", "name": "TCU"}, "22": {"owner": "Brian", "wins": "2", "losses": "0", "name": "Miami (FL)"}, "23": {"owner": "Mike", "wins": "0", "losses": "4", "name": "Baylor"}, "24": {"owner": "Brad", "wins": "3", "losses": "1", "name": "Auburn"}, "25": {"owner": "Adam", "wins": "3", "losses": "1", "name": "Oregon"}, "26": {"owner": "Adam", "wins": "2", "losses": "1", "name": "Northwestern"}, "27": {"owner": "Brad", "wins": "2", "losses": "1", "name": "Florida"}, "28": {"owner": "Mike", "wins": "4", "losses": "0", "name": "Utah"}, "29": {"owner": "Brian", "wins": "4", "losses": "0", "name": "Washington St."}, "30": {"owner": "Chad", "wins": "3", "losses": "1", "name": "Colorado"}, "31": {"owner": "Chad", "wins": "3", "losses": "1", "name": "Iowa"}, "32": {"owner": "Brian", "wins": "1", "losses": "3", "name": "Pittsburgh"}, "33": {"owner": "Mike", "wins": "3", "losses": "1", "name": "Tennessee"}, "34": {"owner": "Brad", "wins": "2", "losses": "1", "name": "Georgia Tech"}, "35": {"owner": "Adam", "wins": "3", "losses": "1", "name": "Texas A&M"}, "36": {"owner": "Adam", "wins": "1", "losses": "2", "name": "Arkansas"}, "37": {"owner": "Brad", "wins": "3", "losses": "0", "name": "Texas Tech"}, "38": {"owner": "Mike", "wins": "3", "losses": "1", "name": "NC State"}, "39": {"owner": "Brian", "wins": "2", "losses": "2", "name": "Nebraska"}, "40": {"owner": "Chad", "wins": "2", "losses": "2", "name": "Arizona St."}, "41": {"owner": "Chad", "wins": "2", "losses": "1", "name": "Michigan St."}, "42": {"owner": "Brian", "wins": "3", "losses": "1", "name": "Kentucky"}, "43": {"owner": "Mike", "wins": "1", "losses": "3", "name": "North Carolina"}, "44": {"owner": "Brad", "wins": "1", "losses": "3", "name": "Oregon St."}, "45": {"owner": "Adam", "wins": "3", "losses": "0", "name": "Minnesota"}, "46": {"owner": "Adam", "wins": "4", "losses": "0", "name": "Duke"}, "47": {"owner": "Brad", "wins": "2", "losses": "1", "name": "Maryland"}, "48": {"owner": "Mike", "wins": "2", "losses": "1", "name": "Iowa St."}, "49": {"owner": "Brian", "wins": "3", "losses": "1", "name": "Mississippi St."}, "50": {"owner": "Chad", "wins": "1", "losses": "3", "name": "Kansas"}, "51": {"owner": "Chad", "wins": "1", "losses": "3", "name": "Missouri"}, "52": {"owner": "Brian", "wins": "3", "losses": "1", "name": "South Carolina"}, "53": {"owner": "Mike", "wins": "2", "losses": "2", "name": "Syracuse"}, "54": {"owner": "Brad", "wins": "2", "losses": "1", "name": "Indiana"}, "55": {"owner": "Adam", "wins": "2", "losses": "2", "name": "Arizona"}, "56": {"owner": "Adam", "wins": "2", "losses": "1", "name": "Ole Miss"}, "57": {"owner": "Brad", "wins": "3", "losses": "1", "name": "Vanderbilt"}, "58": {"owner": "Mike", "wins": "1", "losses": "3", "name": "Boston College"}, "59": {"owner": "Brian", "wins": "4", "losses": "0", "name": "Wake Forest"}, "60": {"owner": "Chad", "wins": "2", "losses": "1", "name": "Illinois"}}
+function showNcaaDraft() { 
+    var ncaaDraft = window.FOOTBALL.ncaaDraft || {}
+    for(var key in ncaaDraft) { 
+	if(ncaaDraft.hasOwnProperty(key)) { 
+	    let item = document.createElement("li");
+	    let pick = ncaaDraft[key];
+	    let txt = pick.owner + " - " + pick.name + " (" + pick.wins + ", " + pick.losses + ")"
+	    let text = document.createTextNode(txt);
+	    item.appendChild(text);
+	    let list = document.getElementById("ncaa-draft");
+	    list.appendChild(item);
+	}
+    }    
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    showNcaaStandings();
+    showNcaaDraft();
+}, false);
