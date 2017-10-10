@@ -2,23 +2,56 @@
 <head>
   <script src="./ncaaJson.js"></script>
   <script src="./nflJson.js"></script>
+  <script src="./overallJson.js"></script>
   <script src="./ncaa.js"></script>
+  <link rel="stylesheet" type="text/css" href="./styles.css" />
 </head>
 <body>
-  <h1>NCAA</h1>
-  <h2>Standings</h2>
-  <ol id="ncaa-standings">
-  </ol>
-  <h2>Draft</h2>
-  <ol id="ncaa-draft">
-  </ol>
-  <hr />
-  <h1>NFL</h1>
-  <h2>Standings</h2>
-  <ol id="nfl-standings">
-  </ol>
-  <h2>Draft</h2>
-  <ol id="nfl-draft">
-  </ol>
+  <div class="main">
+    <h1>Standings</h1>
+    <div class="standings">
+      <div class="standings-block">
+	<h2>NCAA</h2>
+	<ol id="ncaa-standings">
+	</ol>
+      </div>
+    
+      <div class="standings-block">
+	<h2>NFL</h2>
+	<ol id="nfl-standings">
+	</ol>
+      </div>
+
+      <div class="standings-block">
+	<h2>Overall</h2>
+	<ol id="overall-standings">
+	</ol>
+      </div>
+    </div>
+
+    <h1>Draft</h1>
+
+    <div id="tabs">
+      <span class="selected">All</span>
+      <span>Adam</span>
+      <span>Brad</span>
+      <span>Brian</span>
+      <span>Chad</span>
+      <span>Mike</span>
+    </div>
+
+    <div class="draft-container">
+      <div class="draft">
+	<h2>NCAA</h2>
+	<ol id="ncaa-draft">
+	</ol>
+      </div>
+      <div class="draft">
+	<h2>NFL</h2>
+	<ol id="nfl-draft">
+	</ol>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
