@@ -32,7 +32,7 @@ function showDraft(draft, element) {
 	    item.appendChild(text);
 	    element.appendChild(item);
 	}
-    }    
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
