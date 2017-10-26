@@ -1,3 +1,3 @@
 window.FOOTBALL = window.FOOTBALL || {}
 
-window.FOOTBALL.overallStandings=[{"owner": "Mike", "wins": "69", "losses": "45"}, {"owner": "Brian", "wins": "67", "losses": "43"}, {"owner": "Chad", "wins": "67", "losses": "41"}, {"owner": "Brad", "wins": "66", "losses": "45"}, {"owner": "Adam", "wins": "57", "losses": "51"}]
+window.FOOTBALL.overallStandings=[{"owner": "Chad", "wins": "78", "losses": "47"}, {"owner": "Mike", "wins": "76", "losses": "52"}, {"owner": "Brad", "wins": "75", "losses": "50"}, {"owner": "Brian", "wins": "73", "losses": "52"}, {"owner": "Adam", "wins": "63", "losses": "61"}]
